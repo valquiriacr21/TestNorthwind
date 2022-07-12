@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "emTIre1uKX0Pd0IzeVVbv1PX+vW68mZ/KTdNSe1yoqY=",
+  "Source": "TestNorthwind",
+  "BasePath": "_content/TestNorthwind",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
