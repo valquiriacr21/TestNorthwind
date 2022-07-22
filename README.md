@@ -1,7 +1,7 @@
 # TestNorthwind is a REST API project with Database First and Authentication to our REST API with JWT token
 
   # Project database
-You have to run the sql file in sql Folder on your local sql server
+You have to run the sql file in sql Folder on your local sql server "Execute northwind on SQL SErver.sql"
 
   # Import Package
   Microsoft.EntityFrameworkCore.SqlServer
