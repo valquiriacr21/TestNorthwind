@@ -1,0 +1,3 @@
+Microsoft.ASPNETCore.Authentication.JwtBearer
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore.UI
