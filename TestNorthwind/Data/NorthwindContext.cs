@@ -1,9 +1,19 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TestNorthwind.Models;
 
 namespace TestNorthwind.Data
 {
+
+    public partial class ApplicationDbContext : IdentityDbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    : base(options)
+        {
+        }
+    }
+
     public partial class NorthwindContext : DbContext
     {
         public NorthwindContext()
