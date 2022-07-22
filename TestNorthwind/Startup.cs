@@ -32,7 +32,7 @@ namespace TestNorthwind
             services.AddCors();
 
             //JWT Configuring
-            services.Configure<JwtConfig>(Configuration.GetSection("JWTSettings"));
+            services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
 
             //Database Configuring
@@ -46,32 +46,30 @@ namespace TestNorthwind
 
 
             //JWT Configuring
-            services.AddAuthentication(options =>
-            {
+            services.AddAuthentication(options => {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-                      .AddJwtBearer(jwt =>
-                      {
-                          var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
+               .AddJwtBearer(jwt => {
+                   var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
-                          jwt.SaveToken = true;
-                          jwt.TokenValidationParameters = new TokenValidationParameters
-                          {
-                              ValidateIssuerSigningKey = true,
-                              IssuerSigningKey = new SymmetricSecurityKey(key),
-                              ValidateIssuer = false,
-                              ValidateAudience = false,
-                              ValidateLifetime = true,
-                              RequireExpirationTime = false
-                          };
-                      });
+                   jwt.SaveToken = true;
+                   jwt.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuerSigningKey = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(key),
+                       ValidateIssuer = false,
+                       ValidateAudience = false,
+                       ValidateLifetime = true,
+                       RequireExpirationTime = false
+                   };
+               });
 
             //Identity Configuring
             services.AddDefaultIdentity<IdentityUser>(options =>
             options.SignIn.RequireConfirmedAccount = true)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+                        .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllers();
 

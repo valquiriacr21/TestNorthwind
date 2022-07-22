@@ -24,6 +24,7 @@ namespace TestNorthwind.Models
         public string ShipCountry { get; set; }
         [Column("CustomerID")]
         [StringLength(5)]
+        [ForeignKey("CustomerID")]
         public string CustomerId { get; set; }
         [Required(ErrorMessage = "Customer Name.. is Required")]
         [StringLength(40)]
@@ -57,6 +58,7 @@ namespace TestNorthwind.Models
         [StringLength(40)]
         public string ShipperName { get; set; }
         [Column("ProductID")]
+        [ForeignKey("ProductID")]
         public int ProductId { get; set; }
         [Required(ErrorMessage = "Product Name.. is Required")]
         [StringLength(40)]
