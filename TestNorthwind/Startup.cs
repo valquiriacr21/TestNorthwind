@@ -37,12 +37,12 @@ namespace TestNorthwind
 
             //Database Configuring
             services.AddDbContext<NorthwindContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DataConnection")));
 
             //Database Identity Configuring
             services.AddDbContext<ApplicationDbContext>(options =>
            options.UseSqlServer(
-          Configuration.GetConnectionString("DefaultConnection2")));
+          Configuration.GetConnectionString("UserConnection")));
 
 
             //JWT Configuring
