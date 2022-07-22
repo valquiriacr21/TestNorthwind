@@ -19,8 +19,8 @@ Scaffold-Dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection
 
   # Reconfigure your database connection
   Reconfigure your connection to the database in the [appsettings.json]
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;MultipleActiveResultSets=True;",
-    "DefaultConnection2": "Server=(localdb)\\MSSQLLocalDB;Database=NorthwindwithLogin;Trusted_Connection=True;MultipleActiveResultSets=true;"
+    "DataConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;MultipleActiveResultSets=True;",
+    "UserConnection": "Server=(localdb)\\MSSQLLocalDB;Database=NorthwindwithLogin;Trusted_Connection=True;MultipleActiveResultSets=true;"
     -where your "Server" is equal to the name of your server
     -and "Database" is equal to the name of your database "Northwind"
     I have two connections, one to the Northwind data app and another for authentication issues
