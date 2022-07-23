@@ -3,7 +3,7 @@
   # Project database
 You have to run the sql file in sql Folder on your local sql server [Execute northwind on SQL SErver.sql]
 
-  # Import Package
+  # Import Package in Net Core Project
   Microsoft.EntityFrameworkCore.SqlServer
   Microsoft.EntityFrameworkCore.Tools
   Microsoft.VisualStudio.Web.CodeGeneration.Design
