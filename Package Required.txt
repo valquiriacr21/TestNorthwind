@@ -1,3 +1,7 @@
 Microsoft.ASPNETCore.Authentication.JwtBearer
 Microsoft.AspNetCore.Identity.EntityFrameworkCore
 Microsoft.AspNetCore.Identity.EntityFrameworkCore.UI
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+Swashbuckle.AspNetCore
