@@ -19,6 +19,11 @@ You have to run the sql file in sql Folder on your local sql server [Execute nor
     -where your "Server" is equal to the name of your server
     -and "Database" is equal to the name of your database "Northwind"
     I have two connections, one to the Northwind data app and another for authentication issues
+    
+ ## migrate the users database 
+ You need to migrate the users database NorthwindwithLogin for that
+ Since you use several contexts, you must specify the context that inherits from IdentityBdContext
+  ####  Add-Migration "InitialCreate" -Context "ApplicationDbContext"
 
 
 
